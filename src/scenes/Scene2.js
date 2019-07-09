@@ -13,13 +13,19 @@ export class scene2 extends Phaser.Scene {
       this.grid.setScale(0.9);
       this.noted = this.add.image(798, -100, "noted");
       this.noted.setScale(0.4)
+    }
     
+    moveNoted(noted, speed) {
+      noted.y += speed;
+      if (noted.y > 400) {
+        this.resetNotePos(noted);
       }
-    
-    moveNote(note, speed) {
-      note.y += speed;
+    }
+
+    resetNotePos(noted){
+      noted.y = 0;
     }
     update() {
-      this.moveNote(this.noted, 10)
+      this.moveNoted(this.noted, 10)
     }
-    }
+  }
