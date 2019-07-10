@@ -6,7 +6,7 @@ export class scene2 extends Phaser.Scene {
     create(){
       this.background = this.add.image(0,0,"background");
       this.background.setOrigin(0,0);
-      this.add.text(20, 20, "Welcome to this monstrocity", {font: "25px Arial", fill: "yellow"});
+      this.add.text(20, 20, "Welcome", {font: "40px Arial", fill: "black"});
       
       
       this.grid = this.add.image(950, 475, "grid");
@@ -32,7 +32,7 @@ export class scene2 extends Phaser.Scene {
       note.y = -100;
     }
     update() {
-      this.moveNote(this.noted, 7)
+      this.moveNote(this.noted, 1)
       this.moveNote(this.notef, 4)
       this.moveNote(this.notej, 3)
       this.moveNote(this.notek, 9)
