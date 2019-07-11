@@ -22,12 +22,14 @@ constructor(){
     this.load.image("keyk", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/imagesforgame/mania-key1.png");
     this.load.image("notek", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/imagesforgame/mania-note1H.png");
 
+    this.load.image("mmbackground", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/mainmenu.PNG");
+    this.load.image("mmbutton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/menubutton.PNG")
   
   }
 
   create() {
     this.add.text(20, 20, "Loading");
-    this.scene.start("play");
+    this.scene.start("menu");
   }
 
   
