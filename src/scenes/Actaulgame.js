@@ -32,9 +32,9 @@ export class scene2 extends Phaser.Scene {
       note.y = -100;
     }
     update() {
-      this.moveNote(this.noted, 1)
-      this.moveNote(this.notef, 4)
+      this.moveNote(this.noted, 10)
+      this.moveNote(this.notef, 10)
       this.moveNote(this.notej, 3)
-      this.moveNote(this.notek, 9)
+      this.moveNote(this.notek, 10)
     }
   }

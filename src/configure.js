@@ -1,5 +1,5 @@
-import { scene1 } from './scenes/Scene1';
-import { scene2 } from './scenes/Scene2';
+import { scene1 } from './scenes/Preloader';
+import { scene2 } from './scenes/Actaulgame';
 
 export var config = {
   type: Phaser.AUTO,
