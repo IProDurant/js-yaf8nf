@@ -19,7 +19,7 @@ export class scene2 extends Phaser.Scene {
       this.notej.setScale(0.4);
       this.notek = this.add.image(1098, -100, "notek");
       this.notek.setScale(0.4);
-      const backbutton = this.add.image(400, 475, "gob");
+      const backbutton = this.add.image(400, 475, "gobcak");
       backbutton.setInteractive();
       backbutton.on('pointerdown', () => { this.scene.start("menu");; });
     }
