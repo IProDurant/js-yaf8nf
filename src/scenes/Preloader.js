@@ -23,8 +23,8 @@ constructor(){
     this.load.image("notek", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/imagesforgame/mania-note1H.png");
 
     this.load.image("mmbackground", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/mainmenu.PNG");
-    this.load.image("mmbutton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/menubutton.PNG")
-    this.load.image("goback", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/backbtjbfdsjnb.PNG")
+    this.load.image("mmbutton", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/playbuttonlolidknjsdfnjadfnj.PNG")
+    this.load.image("goback", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/backbuttonthinglsefadf.PNG")
   
   }
 
