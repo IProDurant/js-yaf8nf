@@ -2,7 +2,7 @@
 import './style.css';
 
 //DEPENDENCIES
-import 'haser';
+import "phaser";
 
 //RUN THE THING
 

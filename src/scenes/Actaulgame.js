@@ -1,3 +1,4 @@
+import "phaser";
 export class scene2 extends Phaser.Scene {
   constructor(){
     super("play");

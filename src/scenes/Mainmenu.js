@@ -1,3 +1,4 @@
+import "phaser";
 export class scene15 extends Phaser.Scene {
   constructor(){
     super("menu");

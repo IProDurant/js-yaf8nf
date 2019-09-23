@@ -1,3 +1,4 @@
+import "phaser";
 import { scene1 } from './scenes/Preloader';
 import { scene2 } from './scenes/Actaulgame';
 import { scene15 } from './scenes/Mainmenu'
