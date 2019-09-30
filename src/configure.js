@@ -10,5 +10,5 @@ export var config = {
   height: 950,
   width: 1900,
   backgroundColor: 0x000000,
-  scene: [scene1, scene15, scene2]
+  scene: [scene1, scene15, scene2, scene17]
 }

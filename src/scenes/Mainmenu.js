@@ -16,7 +16,8 @@ export class scene15 extends Phaser.Scene {
       const setting = this.add.image(950,550, "settings");
       setting.setScale(.9);
       setting.setInteractive();
-      setting.on('pointerdown', () => {this.scene.start("setmen");; });
+      setting.on('pointerdown', () => { this.scene.start("setmen");; });
       }
     }
+
     
