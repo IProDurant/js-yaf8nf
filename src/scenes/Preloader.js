@@ -5,7 +5,7 @@ constructor(){
   }
 
   preload(){
-    this.load.image("background", 'https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/pixelart-1562708019983-8892.jpg');
+    this.load.image("background", 'https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/Background%20Asset.png');
     this.load.image("grid", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/imagesforgame/maniagrid.jpg");
 
 
