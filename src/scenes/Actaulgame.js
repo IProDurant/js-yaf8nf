@@ -7,7 +7,7 @@ export class scene2 extends Phaser.Scene {
     create(){
       this.background = this.add.image(0,0,"background");
       this.background.setOrigin(0,0);
-      this.add.text(20, 20, "Welcome", {font: "40px Arial", fill: "black"});
+      this.add.text(20, 20, "[NOT EVEN IN BETA]", {font: "40px Arial", fill: "black"});
       
       
       this.grid = this.add.image(950, 475, "grid");
