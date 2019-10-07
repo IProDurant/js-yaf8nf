@@ -12,8 +12,9 @@ export class scene17 extends Phaser.Scene {
     backbutton.on("pointerdown", () => {
       this.scene.start("menu");
     });
-    const fullscreenButton = this.add.image("fullscreen").setInteractive();
-      this.fullscreenB.on('pointerdown', function () {
+    const fullscreenButton = this.add.image(500, 500, "fullscreen")
+    fullscreenButton.setInteractive();
+    fullscreenButton.on('pointerdown', function () {
       if (this.scale.isFullscreen) {
         this.scale.stopFullscreen();
       } else {
