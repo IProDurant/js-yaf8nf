@@ -23,7 +23,11 @@ export class scene2 extends Phaser.Scene {
       const backbutton = this.add.image(250, 825, "goback");
       backbutton.setInteractive();
       backbutton.on('pointerdown', () => { this.scene.start("menu");; });
+      var keyObj = scene.input.keyboard.addKey('W');  // Get key object
+      keyObj.on('down', this.notek = this.add.image(1098, 100, "notek"));
     }
+
+    
     
     moveNote(note, speed) {
       note.y += speed;
