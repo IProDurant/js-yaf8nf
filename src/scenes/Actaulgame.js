@@ -23,11 +23,33 @@ export class scene2 extends Phaser.Scene {
       const backbutton = this.add.image(250, 825, "goback");
       backbutton.setInteractive();
       backbutton.on('pointerdown', () => { this.scene.start("menu");; });
-      var keyObj = scene.input.keyboard.addKey('W');  // Get key object
-      keyObj.on('down', this.notek = this.add.image(1098, 100, "notek"));
+      this.input.keyboard.on('keydown_S', this.yourFunction, this);
+      this.input.keyboard.on('keyup_S', this.yourFun, this);
     }
 
-    
+    yourFunction(event) {
+    // Here you can see what's passed when Phaser triggers it.
+    console.log(arguments);
+
+    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.S) {
+        console.log('S was pressed');
+        this.keyf = this.add.image(32, 100, "notef");
+    } else if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
+        console.log('W was pressed');
+    }
+}
+
+    yourFun(event) {
+        // Here you can see what's passed when Phaser triggers it.
+    console.log(arguments);
+
+    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.S) {
+        console.log('S was released');
+        this.keyf = this.add.image(32, 100, "notef");
+    } else if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
+        console.log('W was released');
+    }
+}
     
     moveNote(note, speed) {
       note.y += speed;
