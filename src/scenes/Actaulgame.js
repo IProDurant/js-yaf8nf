@@ -21,36 +21,55 @@ export class scene2 extends Phaser.Scene {
       this.notek = this.add.image(1098, -100, "notek");
       this.notek.setScale(0.4);
       const backbutton = this.add.image(250, 825, "goback");
+
+
       backbutton.setInteractive();
       backbutton.on('pointerdown', () => { this.scene.start("menu");; });
-      this.input.keyboard.on('keydown_S', this.yourFunction, this);
-      this.input.keyboard.on('keyup_S', this.yourFun, this);
+      this.input.keyboard.on('keydown_S', this.SPRESSED, this);
+      this.input.keyboard.on('keyup_S', this.SRELEASED, this);
+      this.input.keyboard.on('keydown_W', this.WPRESSED, this);
+      this.input.keyboard.on('keyup_W', this.WRELEASED, this);
     }
 
-    yourFunction(event) {
+    SPRESSED(event) {
     // Here you can see what's passed when Phaser triggers it.
     console.log(arguments);
 
     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.S) {
         console.log('S was pressed');
         this.keyf = this.add.image(32, 100, "notef");
-    } else if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
-        console.log('W was pressed');
-    }
+    } 
 }
 
-    yourFun(event) {
+    SRELEASED(event) {
         // Here you can see what's passed when Phaser triggers it.
     console.log(arguments);
 
     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.S) {
         console.log('S was released');
-        this.keyf = this.add.image(32, 100, "notef");
-    } else if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
+        this.resetKeyPos();
+    }
+}
+
+    WRELEASED(event) {
+        // Here you can see what's passed when Phaser triggers it.
+    console.log(arguments);
+     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
         console.log('W was released');
     }
 }
-    
+
+    WPRESSED(event) {
+        // Here you can see what's passed when Phaser triggers it.
+    console.log(arguments);
+     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
+        console.log('W was pressed');
+    }
+}
+    resetKeyPos() {
+      console.log("The function works lol")
+    }
+
     moveNote(note, speed) {
       note.y += speed;
       if (note.y > 775) {
@@ -61,6 +80,7 @@ export class scene2 extends Phaser.Scene {
     resetNotePos(note){
       note.y = -100;
     }
+
     update() {
       this.moveNote(this.noted, 10)
       this.moveNote(this.notef, 10)
