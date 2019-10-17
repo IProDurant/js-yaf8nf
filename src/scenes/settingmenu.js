@@ -7,7 +7,8 @@ export class scene17 extends Phaser.Scene {
   create() {
     this.background = this.add.image(0, 0, "mmbackground");
     this.background.setOrigin(0, 0);
-    const backbutton = this.add.image(950, 7, "goback");
+    const backbutton = this.add.image(950, 600, "goback");
+    backbutton.setScale(.9);
     backbutton.setInteractive();
     backbutton.on("pointerdown", () => {
       this.scene.start("menu");
