@@ -7,12 +7,13 @@ export class scene17 extends Phaser.Scene {
   create() {
     this.background = this.add.image(0, 0, "mmbackground");
     this.background.setOrigin(0, 0);
-    const backbutton = this.add.image(250, 825, "goback");
+    const backbutton = this.add.image(950, 7, "goback");
     backbutton.setInteractive();
     backbutton.on("pointerdown", () => {
       this.scene.start("menu");
     });
-    const fullscreenButton = this.add.image(500, 500, "fullscreen")
+    const fullscreenButton = this.add.image(950, 350, "fullscreen")
+    fullscreenButton.setScale(.6);
     fullscreenButton.setInteractive();
     fullscreenButton.on('pointerdown', function () {
       if (this.scale.isFullscreen) {
