@@ -44,7 +44,8 @@ export class scene2 extends Phaser.Scene {
 
     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.D) {
         console.log('D was pressed');
-        this.noted.setTint = Math.random() * 0xffffff;
+        var keyd = this.add.image(100, 100, "noted");
+        keyd.setTint(0xff0000);
     } 
 }
 
