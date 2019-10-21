@@ -25,50 +25,50 @@ export class scene2 extends Phaser.Scene {
 
       backbutton.setInteractive();
       backbutton.on('pointerdown', () => { this.scene.start("menu");; });
-      this.input.keyboard.on('keydown_S', this.SPRESSED, this);
-      this.input.keyboard.on('keyup_S', this.SRELEASED, this);
-      this.input.keyboard.on('keydown_W', this.WPRESSED, this);
-      this.input.keyboard.on('keyup_W', this.WRELEASED, this);
+
+      
+      this.input.keyboard.on('keydown_D', this.DPRESSED, this);
+      this.input.keyboard.on('keyup_D', this.DRELEASED, this);
+      this.input.keyboard.on('keydown_F', this.FPRESSED, this);
+      this.input.keyboard.on('keyup_F', this.FRELEASED, this);
+      
+      //this.input.keyboard.on('keydown_J', this.JPRESSED, this);
+      //this.input.keyboard.on('keyup_J', this.JRELEASED, this);
+      //this.input.keyboard.on('keydown_K', this.KPRESSED, this);
+      //this.input.keyboard.on('keyup_K', this.KRELEASED, this);
     }
 
-    SPRESSED(event) {
+    DPRESSED(event) {
     // Here you can see what's passed when Phaser triggers it.
     console.log(arguments);
 
-    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.S) {
-        console.log('S was pressed');
-        this.keyf = this.add.image(32, 100, "notef");
+    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.D) {
+        console.log('D was pressed');
+        this.noted.setTint = Math.random() * 0xffffff;
     } 
 }
 
-    SRELEASED(event) {
+    DRELEASED(event) {
         // Here you can see what's passed when Phaser triggers it.
-    console.log(arguments);
-
-    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.S) {
-        console.log('S was released');
-        this.resetKeyPos();
+      if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.D) {
+        console.log('D was released');
     }
 }
 
-    WRELEASED(event) {
+    FRELEASED(event) {
         // Here you can see what's passed when Phaser triggers it.
-    console.log(arguments);
-     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
-        console.log('W was released');
+     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
+        console.log('F was released');
     }
 }
 
-    WPRESSED(event) {
+    FPRESSED(event) {
         // Here you can see what's passed when Phaser triggers it.
-    console.log(arguments);
-     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.W) {
-        console.log('W was pressed');
+     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
+        console.log('F was pressed');
     }
 }
-    resetKeyPos() {
-      console.log("The function works lol")
-    }
+  
 
     moveNote(note, speed) {
       note.y += speed;
