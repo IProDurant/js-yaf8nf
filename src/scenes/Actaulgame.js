@@ -31,7 +31,6 @@ export class scene2 extends Phaser.Scene {
       this.input.keyboard.on('keyup_D', this.DRELEASED, this);
       this.input.keyboard.on('keydown_F', this.FPRESSED, this);
       this.input.keyboard.on('keyup_F', this.FRELEASED, this);
-      
       //this.input.keyboard.on('keydown_J', this.JPRESSED, this);
       //this.input.keyboard.on('keyup_J', this.JRELEASED, this);
       //this.input.keyboard.on('keydown_K', this.KPRESSED, this);
@@ -39,36 +38,53 @@ export class scene2 extends Phaser.Scene {
     }
 
     DPRESSED(event) {
-    // Here you can see what's passed when Phaser triggers it.
-    console.log(arguments);
-
     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.D) {
         console.log('D was pressed');
-        var keyd = this.add.image(100, 100, "noted");
-        keyd.setTint(0xff0000);
     } 
 }
 
     DRELEASED(event) {
-        // Here you can see what's passed when Phaser triggers it.
       if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.D) {
         console.log('D was released');
     }
 }
 
     FRELEASED(event) {
-        // Here you can see what's passed when Phaser triggers it.
      if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
         console.log('F was released');
     }
 }
 
     FPRESSED(event) {
-        // Here you can see what's passed when Phaser triggers it.
      if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
         console.log('F was pressed');
     }
 }
+    JPRESSED(event) {
+    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.J) {
+        console.log('J was pressed');
+    } 
+}
+
+    JRELEASED(event) {
+      if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.J) {
+        console.log('J was released');
+    }
+}
+
+    KRELEASED(event) {
+     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.K) {
+        console.log('K was released');
+    }
+}
+
+    KPRESSED(event) {
+     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
+        console.log('K was pressed');
+    }
+}
+
+
   
 
     moveNote(note, speed) {
