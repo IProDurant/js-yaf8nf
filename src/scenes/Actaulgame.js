@@ -31,10 +31,10 @@ export class scene2 extends Phaser.Scene {
       this.input.keyboard.on('keyup_D', this.DRELEASED, this);
       this.input.keyboard.on('keydown_F', this.FPRESSED, this);
       this.input.keyboard.on('keyup_F', this.FRELEASED, this);
-      //this.input.keyboard.on('keydown_J', this.JPRESSED, this);
-      //this.input.keyboard.on('keyup_J', this.JRELEASED, this);
-      //this.input.keyboard.on('keydown_K', this.KPRESSED, this);
-      //this.input.keyboard.on('keyup_K', this.KRELEASED, this);
+      this.input.keyboard.on('keydown_J', this.JPRESSED, this);
+      this.input.keyboard.on('keyup_J', this.JRELEASED, this);
+      this.input.keyboard.on('keydown_K', this.KPRESSED, this);
+      this.input.keyboard.on('keyup_K', this.KRELEASED, this);
     }
 
     DPRESSED(event) {
@@ -79,7 +79,7 @@ export class scene2 extends Phaser.Scene {
 }
 
     KPRESSED(event) {
-     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
+     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.K) {
         console.log('K was pressed');
     }
 }
