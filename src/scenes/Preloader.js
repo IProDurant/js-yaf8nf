@@ -28,6 +28,9 @@ constructor(){
     this.load.image("goback", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/exitoff.png")
     this.load.image("settings", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/Settingsbutton.png")
     this.load.image("fullscreen", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/Fullscreen%20button.png")
+
+    this.load.image("keyblue", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/imagesforgame/mania-key2D.png")
+    this.load.image("keywhite", "https://cdn.jsdelivr.net/gh/IProDurant/js-yaf8nf@IProDurant-patch-1/assets/images/imagesforgame/mania-key1D.png")
   
   }
 

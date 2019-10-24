@@ -1,9 +1,20 @@
 import "phaser";
+
+var x = 0;
+var keyFpress;
+var keyDpress;
+var keyJpress;
+var keyKpress;
+var cursors;
+var keyD;
+var keyF;
+var keyJ;
+var keyK;
+
 export class scene2 extends Phaser.Scene {
   constructor(){
     super("play");
     }
-
     create(){
       this.background = this.add.image(0,0,"background");
       this.background.setOrigin(0,0);
@@ -20,72 +31,31 @@ export class scene2 extends Phaser.Scene {
       this.notej.setScale(0.4);
       this.notek = this.add.image(1098, -100, "notek");
       this.notek.setScale(0.4);
+      keyFpress = this.add.image(800, 860, "keyblue");
+      keyFpress.setScale(2);
+      keyDpress = this.add.image(900, 859, "keywhite");
+      keyDpress.setScale(2);
+      keyJpress = this.add.image(1000, 859, "keywhite");
+      keyJpress.setScale(2);
+      keyKpress = this.add.image(1100, 859, "keyblue");
+      keyKpress.setScale(2);
       const backbutton = this.add.image(250, 825, "goback");
-
+      cursors = this.input.keyboard.createCursorKeys();
 
       backbutton.setInteractive();
       backbutton.on('pointerdown', () => { this.scene.start("menu");; });
 
-      
-      this.input.keyboard.on('keydown_D', this.DPRESSED, this);
-      this.input.keyboard.on('keyup_D', this.DRELEASED, this);
-      this.input.keyboard.on('keydown_F', this.FPRESSED, this);
-      this.input.keyboard.on('keyup_F', this.FRELEASED, this);
-      this.input.keyboard.on('keydown_J', this.JPRESSED, this);
-      this.input.keyboard.on('keyup_J', this.JRELEASED, this);
-      this.input.keyboard.on('keydown_K', this.KPRESSED, this);
-      this.input.keyboard.on('keyup_K', this.KRELEASED, this);
+      keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
+      keyF = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.F);
+      keyJ = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.J);
+      keyK = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.K);
+
+          }
+
+    ESCRELEASED(event) {
+      x++;
     }
 
-    DPRESSED(event) {
-    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.D) {
-        console.log('D was pressed');
-    } 
-}
-
-    DRELEASED(event) {
-      if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.D) {
-        console.log('D was released');
-    }
-}
-
-    FRELEASED(event) {
-     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
-        console.log('F was released');
-    }
-}
-
-    FPRESSED(event) {
-     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.F) {
-        console.log('F was pressed');
-    }
-}
-    JPRESSED(event) {
-    if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.J) {
-        console.log('J was pressed');
-    } 
-}
-
-    JRELEASED(event) {
-      if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.J) {
-        console.log('J was released');
-    }
-}
-
-    KRELEASED(event) {
-     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.K) {
-        console.log('K was released');
-    }
-}
-
-    KPRESSED(event) {
-     if (event.keyCode === Phaser.Input.Keyboard.KeyCodes.K) {
-        console.log('K was pressed');
-    }
-}
-
-
-  
 
     moveNote(note, speed) {
       note.y += speed;
@@ -99,9 +69,19 @@ export class scene2 extends Phaser.Scene {
     }
 
     update() {
-      this.moveNote(this.noted, 10)
-      this.moveNote(this.notef, 9)
-      this.moveNote(this.notej, 8)
-      this.moveNote(this.notek, 11)
+      if (x % 2 == 0){
+        this.moveNote(this.noted, 10)
+        this.moveNote(this.notef, 9)
+        this.moveNote(this.notej, 8)
+        this.moveNote(this.notek, 11)
+        }
+
+      if (keyD.isDown) {
+        keyDpress.y = 100;
+        if (keyD.isup) {
+        keyDpress.y -=100;
+        }
+    }
+      
     }
   }
