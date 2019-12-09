@@ -5,6 +5,7 @@ var keyFpress;
 var keyDpress;
 var keyJpress;
 var keyKpress;
+
 //var cursors;
 //var keyD;
 //var keyF;
@@ -33,7 +34,7 @@ export class scene2 extends Phaser.Scene {
     this.notej.setScale(0.4);
     this.notek = this.add.image(1098, -100, "notek");
     this.notek.setScale(0.4);
-    keyFpress = this.add.image(800, 860, "keyblue")
+    keyFpress = this.add.image(800, 860, "keyblue");
     keyFpress.setScale(2);
     keyFpress.setVisible(false);
     keyDpress = this.add.image(900, 859, "keywhite").setVisible(false);
@@ -55,13 +56,18 @@ export class scene2 extends Phaser.Scene {
     //keyK = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.K);
     //keyD.on('down', keyflash(event));
 
+    //onkeydown
     this.input.keyboard.on("keyup_ESC", this.ESCRELEASED, this);
-    this.input.keyboard.on('keydown_D', function () {
-        keyD.setVisible(true);
-    });
-    this.input.keyboard.on('keyup_F', this.keyFflash, this);
-    this.input.keyboard.on('keyup_J', this.keyJflash, this);
-    this.input.keyboard.on('keyup_K', this.keyKflash, this);
+    this.input.keyboard.on("keydown_D", this.keyDflash, this);
+    this.input.keyboard.on("keydown_F", this.keyFflash, this);
+    this.input.keyboard.on("keydown_J", this.keyJflash, this);
+    this.input.keyboard.on("keydown_K", this.keyKflash, this);
+
+    //onkeyup
+    this.input.keyboard.on('keyup_D', this.keyDhide, this);
+    this.input.keyboard.on('keyup_F', this.keyFhide, this);
+    this.input.keyboard.on('keyup_J', this.keyJhide, this);
+    this.input.keyboard.on('keyup_K', this.keyKhide, this);
   }
 
   ESCRELEASED(event) {
@@ -71,12 +77,18 @@ export class scene2 extends Phaser.Scene {
   moveNote(note, speed) {
     note.y += speed;
     if (note.y > 775) {
-      this.resetNotePos(note);
+      this.notepressed(note);
     }
   }
 
+  notepressed(note) {
+    if (note.y = -200) {
+      console.log("A NOTE HIT THE BOT")
+      this.resetNotePos(note);
+    }
+  }
   resetNotePos(note) {
-    note.y = -100;
+    note.y = -100
   }
 
   update() {
@@ -88,16 +100,33 @@ export class scene2 extends Phaser.Scene {
     }
   }
 
-  keyFflash(event) {
-      keyFpress.setVisible(true);
-    }
   keyDflash(event) {
-      keyDpress.setVisible(true);
-    }
+    keyFpress.setVisible(true);
+  }
+  keyFflash(event) {
+    keyDpress.setVisible(true);
+  }
   keyJflash(event) {
-      keyJpress.setVisible(true);
-    }
+    keyJpress.setVisible(true);
+  }
   keyKflash(event) {
-      keyKpress.setVisible(true);
-    }
+    keyKpress.setVisible(true);
+  }
+
+  keyDhide(event) {
+    keyFpress.setVisible(false);
+  }
+
+  keyFhide(event) {
+    keyDpress.setVisible(false);
+  }
+
+  keyJhide(event) {
+    keyJpress.setVisible(false);
+  }
+
+  keyKhide(event) {
+    keyKpress.setVisible(false);
+  }
+
 }
