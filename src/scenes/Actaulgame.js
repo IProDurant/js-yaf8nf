@@ -7,10 +7,10 @@ var keyJpress;
 var keyKpress;
 
 //var cursors;
-//var keyD;
-//var keyF;
-//var keyJ;
-//var keyK;
+var keyD = "Inactive";
+var keyF = "Inactive";
+var keyJ = "Inactive";
+var keyK = "Inactive";
 
 export class scene2 extends Phaser.Scene {
   constructor() {
@@ -58,7 +58,7 @@ export class scene2 extends Phaser.Scene {
 
     //onkeydown
     this.input.keyboard.on("keyup_ESC", this.ESCRELEASED, this);
-    this.input.keyboard.on("keydown_D", this.keyDflash, this);
+    keyD = this.input.keyboard.on("keydown_D", this.keyDflash, this);
     this.input.keyboard.on("keydown_F", this.keyFflash, this);
     this.input.keyboard.on("keydown_J", this.keyJflash, this);
     this.input.keyboard.on("keydown_K", this.keyKflash, this);
@@ -77,19 +77,22 @@ export class scene2 extends Phaser.Scene {
   moveNote(note, speed) {
     note.y += speed;
     if (note.y > 775) {
-      this.notepressed(note);
+      this.notepressed(note)
     }
-  }
+  };
 
   notepressed(note) {
     if (note.y = -200) {
-      console.log("A NOTE HIT THE BOT")
-      this.resetNotePos(note);
+      if (keyD && keyF && keyJ && keyK == "Inactive") {
+      console.log("Miss")
+      this.resetNotePos(note)
+      }
     }
-  }
+  };
+
   resetNotePos(note) {
     note.y = -100
-  }
+  };
 
   update() {
     if (x % 2 == 0) {
@@ -97,36 +100,44 @@ export class scene2 extends Phaser.Scene {
       this.moveNote(this.notef, 9);
       this.moveNote(this.notej, 8);
       this.moveNote(this.notek, 11);
-    }
-  }
+    };
+  };
 
   keyDflash(event) {
     keyFpress.setVisible(true);
-  }
+    keyD = "D is Active";
+  };
   keyFflash(event) {
     keyDpress.setVisible(true);
-  }
+    keyF = "F is Active";
+  };
   keyJflash(event) {
     keyJpress.setVisible(true);
-  }
+    keyJ = "J is Active";
+  };
   keyKflash(event) {
     keyKpress.setVisible(true);
-  }
+    keyK = "K is Active";
+  };
 
   keyDhide(event) {
     keyFpress.setVisible(false);
-  }
+    keyD = "Inactive";
+  };
 
   keyFhide(event) {
     keyDpress.setVisible(false);
-  }
+    keyD = "Inactive";
+  };
 
   keyJhide(event) {
     keyJpress.setVisible(false);
-  }
+    keyD = "Inactive";
+  };
 
   keyKhide(event) {
     keyKpress.setVisible(false);
+    keyD = "Inactive";
   }
 
 }
