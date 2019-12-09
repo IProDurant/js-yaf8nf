@@ -84,9 +84,13 @@ export class scene2 extends Phaser.Scene {
   notepressed(note) {
     if (note.y = -200) {
       if (keyD && keyF && keyJ && keyK == "Inactive") {
-      console.log("Miss")
-      this.resetNotePos(note)
+        console.log("Miss")
+        this.resetNotePos(note)
       }
+      elif (keyD && keyF && keyJ && keyK == "Active") {
+        console.log("300")
+        this.resetNotePos(note)
+      };
     }
   };
 
@@ -105,19 +109,19 @@ export class scene2 extends Phaser.Scene {
 
   keyDflash(event) {
     keyFpress.setVisible(true);
-    keyD = "D is Active";
+    keyD = "Active";
   };
   keyFflash(event) {
     keyDpress.setVisible(true);
-    keyF = "F is Active";
+    keyF = "Active";
   };
   keyJflash(event) {
     keyJpress.setVisible(true);
-    keyJ = "J is Active";
+    keyJ = "Active";
   };
   keyKflash(event) {
     keyKpress.setVisible(true);
-    keyK = "K is Active";
+    keyK = "Active";
   };
 
   keyDhide(event) {
