@@ -1,8 +1,8 @@
 import "phaser";
 import { scene1 } from './scenes/Preloader';
-import { scene2 } from './scenes/Actaulgame';
-import { scene15 } from './scenes/Mainmenu';
-import { scene17 } from './scenes/settingmenu';
+import { scene2 } from './scenes/Game';
+import { scene15 } from './scenes/MainMenu';
+import { scene17 } from './scenes/SettingMenu';
 
 
 export var config = {

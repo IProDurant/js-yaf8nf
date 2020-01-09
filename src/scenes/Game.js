@@ -1,5 +1,6 @@
 import "phaser";
 
+import keyfunctions from '../src/scenes/KeyPresses.js';
 var x = 0;
 var keyFpress;
 var keyDpress;
@@ -105,7 +106,7 @@ export class scene2 extends Phaser.Scene {
       this.moveNote(this.notek, 11);
     };
   };
-
+/*
   keyDflash(event) {
     keyFpress.setVisible(true);
     keyD = "Active";
@@ -142,5 +143,5 @@ export class scene2 extends Phaser.Scene {
     keyKpress.setVisible(false);
     keyK = "Inactive";
   }
-
+*/
 }
