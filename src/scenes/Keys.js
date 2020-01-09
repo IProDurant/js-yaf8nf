@@ -32,7 +32,7 @@ class keyfunctions extends Phaser.scene6 {
     keyJ = "Inactive";
   };
 
-  keyKhide(event) {
+  keyKhide() {
     keyKpress.setVisible(false);
     keyK = "Inactive";
   }
