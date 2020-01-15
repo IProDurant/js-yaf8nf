@@ -1,12 +1,13 @@
 import "phaser";
 
-import keyfunctions from '../src/scenes/Keys.js';
+//import keyfunctions from '../src/scenes/Keys.js';
 
 var x = 0;
 var keyFpress;
 var keyDpress;
 var keyJpress;
 var keyKpress;
+let sceneB = this.scene.get('Keyboard inputs');
 
 //var cursors;
 var keyD = "Inactive";
@@ -60,16 +61,16 @@ export class scene2 extends Phaser.Scene {
 
     //onkeydown
     this.input.keyboard.on("keyup_ESC", this.ESCRELEASED, this);
-    this.input.keyboard.on("keydown_D", this.Keys.keyDflash(), this);
-    this.input.keyboard.on("keydown_F", this.Keys.keyFflash, this);
-    this.input.keyboard.on("keydown_J", this.Keys.keyJflash, this);
-    this.input.keyboard.on("keydown_K", this.Keys.keyKflash, this);
+    this.input.keyboard.on("keydown_D", this.Keys.keyDflash, this);
+    //this.input.keyboard.on("keydown_F", this.Keys.keyFflash, this);
+    //this.input.keyboard.on("keydown_J", this.Keys.keyJflash, this);
+    //this.input.keyboard.on("keydown_K", this.Keys.keyKflash, this);
 
     //onkeyup
-    this.input.keyboard.on('keyup_D', this.Keys.keyDhide, this);
-    this.input.keyboard.on('keyup_F', this.Keys.keyFhide, this);
-    this.input.keyboard.on('keyup_J', this.Keys.keyJhide, this);
-    this.input.keyboard.on('keyup_K', this.Keys.keyKhide, this);
+    //this.input.keyboard.on('keyup_D', this.Keys.keyDhide, this);
+    //this.input.keyboard.on('keyup_F', this.Keys.keyFhide, this);
+    //this.input.keyboard.on('keyup_J', this.Keys.keyJhide, this);
+    //this.input.keyboard.on('keyup_K', this.Keys.keyKhide, this);
   }
 
   ESCRELEASED(event) {

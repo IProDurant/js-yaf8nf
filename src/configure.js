@@ -3,8 +3,8 @@ import { scene1 } from './scenes/Preloader';
 import { scene2 } from './scenes/Game';
 import { scene15 } from './scenes/MainMenu';
 import { scene17 } from './scenes/SettingMenu';
-
-
+import { Keys } from './scenes/Keys';
+ 
 export var config = {
   type: Phaser.AUTO,
   height: 915,
