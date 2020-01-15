@@ -60,7 +60,7 @@ export class scene2 extends Phaser.Scene {
 
     //onkeydown
     this.input.keyboard.on("keyup_ESC", this.ESCRELEASED, this);
-    this.input.keyboard.on("keydown_D", this.Keys.keyDflash, this);
+    this.input.keyboard.on("keydown_D", this.Keys.keyDflash(), this);
     this.input.keyboard.on("keydown_F", this.Keys.keyFflash, this);
     this.input.keyboard.on("keydown_J", this.Keys.keyJflash, this);
     this.input.keyboard.on("keydown_K", this.Keys.keyKflash, this);
