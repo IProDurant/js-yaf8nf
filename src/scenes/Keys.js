@@ -1,5 +1,4 @@
 class keyfunctions extends Phaser.scene6 {
-  
   keyDflash(event) {
     keyFpress.setVisible(true);
     keyD = "Active";

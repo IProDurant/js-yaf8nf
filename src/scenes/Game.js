@@ -1,6 +1,6 @@
 import "phaser";
 
-import keyfunctions from '../src/scenes/KeyPresses.js';
+import keyfunctions from '../src/scenes/Keys.js';
 
 var x = 0;
 var keyFpress;
