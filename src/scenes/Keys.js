@@ -1,10 +1,5 @@
-//class keyfunctions extends Phaser.scene6 {
-  class Keys extends Phaser.Scene {
-    constructor ()
-    {
-        super('Keyboard inputs');
-    }
-  keyDflash(event) {
+class keyfunctions extends Phaser.scene6 {
+  export keyDflash(event) {
     keyFpress.setVisible(true);
     keyD = "Active";
   };
