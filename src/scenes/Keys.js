@@ -1,5 +1,10 @@
+import "phaser"
+export class keyfunctions extends Phaser.scene {
+  constructor() {
+    super("KBD");
+  }
+  create() {}
 
-export default class keyfunctions extends Phaser.scene6 {
   keyDflash(event) {
     keyFpress.setVisible(true);
     keyD = "Active";
@@ -36,5 +41,4 @@ export default class keyfunctions extends Phaser.scene6 {
     keyKpress.setVisible(false);
     keyK = "Inactive";
   }
-  
 }

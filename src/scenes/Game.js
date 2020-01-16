@@ -1,6 +1,6 @@
 import "phaser";
 
-import keyfunctions from '../src/scenes/Keys.js';
+import { keyfunctions } from './Keys.js';
 
 var x = 0;
 var keyFpress;
@@ -60,10 +60,10 @@ export class scene2 extends Phaser.Scene {
 
     //onkeydown
     this.input.keyboard.on("keyup_ESC", this.ESCRELEASED, this);
-    this.input.keyboard.on("keydown_D", this.keyDflash.(this));
-    this.input.keyboard.on("keydown_F", this.Keys.keyFflash, this);
-    this.input.keyboard.on("keydown_J", this.Keys.keyJflash, this);
-    this.input.keyboard.on("keydown_K", this.Keys.keyKflash, this);
+    this.input.keyboard.on("keydown_D"), this.keyDflash, this);
+    this.input.keyboard.on("keydown_F", this.keyFflash, this);
+    this.input.keyboard.on("keydown_J", this.keyJflash, this);
+    this.input.keyboard.on("keydown_K", this.keyKflash, this);
 
     //onkeyup
     this.input.keyboard.on('keyup_D', this.Keys.keyDhide, this);
