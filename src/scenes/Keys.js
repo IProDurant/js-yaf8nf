@@ -1,7 +1,7 @@
 import "phaser"
 export class keyfunctions extends Phaser.scene {
   constructor() {
-    super("KBD");
+    super("KBDF");
   }
   create() {}
 

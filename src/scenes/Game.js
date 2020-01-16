@@ -5,6 +5,7 @@ import { keyfunctions } from './Keys.js';
 var x = 0;
 var keyFpress;
 var keyDpress;
+//let my_keys = new keyfunctions()
 var keyJpress;
 var keyKpress;
 
@@ -60,7 +61,7 @@ export class scene2 extends Phaser.Scene {
 
     //onkeydown
     this.input.keyboard.on("keyup_ESC", this.ESCRELEASED, this);
-    this.input.keyboard.on("keydown_D"), this.keyDflash, this);
+    this.input.keyboard.on("keydown_D", thiskeyfunctions.keyDflash, this);
     this.input.keyboard.on("keydown_F", this.keyFflash, this);
     this.input.keyboard.on("keydown_J", this.keyJflash, this);
     this.input.keyboard.on("keydown_K", this.keyKflash, this);
