@@ -61,16 +61,16 @@ export class scene2 extends Phaser.Scene {
 
     //onkeydown
     this.input.keyboard.on("keyup_ESC", this.ESCRELEASED, this);
-    this.input.keyboard.on("keydown_D", thiskeyfunctions.keyDflash, this);
+    this.input.keyboard.on("keydown_D", this.keyDflash, this);
     this.input.keyboard.on("keydown_F", this.keyFflash, this);
     this.input.keyboard.on("keydown_J", this.keyJflash, this);
     this.input.keyboard.on("keydown_K", this.keyKflash, this);
 
     //onkeyup
-    this.input.keyboard.on('keyup_D', this.Keys.keyDhide, this);
-    this.input.keyboard.on('keyup_F', this.Keys.keyFhide, this);
-    this.input.keyboard.on('keyup_J', this.Keys.keyJhide, this);
-    this.input.keyboard.on('keyup_K', this.Keys.keyKhide, this);
+    this.input.keyboard.on('keyup_D', this.keyDhide, this);
+    this.input.keyboard.on('keyup_F', this.keyFhide, this);
+    this.input.keyboard.on('keyup_J', this.keyJhide, this);
+    this.input.keyboard.on('keyup_K', this.keyKhide, this);
   }
 
   ESCRELEASED(event) {
@@ -108,7 +108,7 @@ export class scene2 extends Phaser.Scene {
       this.moveNote(this.notek, 11);
     };
   };
-/*
+
   keyDflash(event) {
     keyFpress.setVisible(true);
     keyD = "Active";
@@ -145,5 +145,5 @@ export class scene2 extends Phaser.Scene {
     keyKpress.setVisible(false);
     keyK = "Inactive";
   }
-*/
+
 }
