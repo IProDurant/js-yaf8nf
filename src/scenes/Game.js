@@ -10,10 +10,14 @@ var keyJpress;
 var keyKpress;
 
 //var cursors;
-var keyD = "Inactive";
+var keyD = false;
 var keyF = "Inactive";
 var keyJ = "Inactive";
 var keyK = "Inactive";
+var el = document.getElementById('display')
+var loc = dw_getPageOffsets(el)
+alert(loc.left);
+
 
 export class scene2 extends Phaser.Scene {
   constructor() {
@@ -85,15 +89,15 @@ export class scene2 extends Phaser.Scene {
   };
 
   notepressed(note) {
-    if (note.y = -200) {
+    /*if (note.y = -200) {
       if (keyD && keyF && keyJ && keyK == "Inactive") {
         console.log("Miss")
         this.resetNotePos(note)
-      } else if (keyD && keyF && keyJ && keyK == "Active") {
+      } else if (keyD && keyF && keyJ && keyK == "Active") {    amazing coding as usual, josh.
         console.log("300")
         this.resetNotePos(note)
       };
-    }
+    }*/
   };
 
   resetNotePos(note) {
@@ -111,7 +115,7 @@ export class scene2 extends Phaser.Scene {
 
   keyDflash(event) {
     keyFpress.setVisible(true);
-    keyD = "Active";
+    keyD = true;
   };
   keyFflash(event) {
     keyDpress.setVisible(true);
