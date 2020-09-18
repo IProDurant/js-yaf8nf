@@ -14,9 +14,7 @@ var keyD = false;
 var keyF = "Inactive";
 var keyJ = "Inactive";
 var keyK = "Inactive";
-var el = document.getElementById('display')
-var loc = dw_getPageOffsets(el)
-alert(loc.left);
+
 
 
 export class scene2 extends Phaser.Scene {
@@ -25,7 +23,7 @@ export class scene2 extends Phaser.Scene {
   }
   create() {
     this.background = this.add.image(0, 0, "background");
-    this.background.setOrigin(0, 0);
+    this.background.setOrigin(0, 0); //useless.
     this.add.text(20, 20, "[NOT EVEN IN BETA]", {
       font: "40px Arial",
       fill: "black"
@@ -88,6 +86,11 @@ export class scene2 extends Phaser.Scene {
     }
   };
 
+  recordNote(note) {
+    var test = note.y;
+    console.log(test);
+  };
+
   notepressed(note) {
     /*if (note.y = -200) {
       if (keyD && keyF && keyJ && keyK == "Inactive") {
@@ -110,6 +113,7 @@ export class scene2 extends Phaser.Scene {
       this.moveNote(this.notef, 9);
       this.moveNote(this.notej, 8);
       this.moveNote(this.notek, 11);
+      this.recordNote(this.not);
     };
   };
 
